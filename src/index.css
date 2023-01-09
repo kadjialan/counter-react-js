@@ -1,5 +1,9 @@
 body {
   margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +14,58 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+button {
+  font-size: 20px;
+  border-radius: 50%;
+  width: 60px;
+  height: 40px;
+}
+
+.main {
+  display: flex;
+  gap: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+} 
+
+/* .imageholder p {
+  position: absolute;
+  bottom: 0;
+} */
+
+.minus {
+  background-color: red;
+  color: white;
+  border: 1px solid red;
+}
+
+.add {
+  background-color: blue;
+  color: white;
+  border: 1px solid blue;
+}
+
+.numb {
+  border: 1px solid black;
+  height: 40px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
 }
