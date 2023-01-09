@@ -51,6 +51,10 @@ export default class App extends Component {
     }
   }
 
+  componentDidMount() {
+    this.interval = setInterval(this.add.bind(this), 5000)
+  }
+
   add() {
     this.setState({count: (this.state.count +1) % image.length})
   }
@@ -63,12 +67,15 @@ export default class App extends Component {
     return <div className="content">
       <div className="imageholder">
         <img src={image[this.state.count].src} alt={image[this.state.count].name} width ={200}></img>
-        <p>{image[this.state.count].name}</p>
+        <p>{image[this.state.count].name} {(this.state.count) +1}</p>
       </div>
       <div className="main">
       <button className="minus" onClick={this.sub.bind(this)}> &lang;</button>
       <div className="numb">{this.state.count}</div>
       <button className="add" onClick={this.add.bind(this)}> &rang; </button>
+      </div>
+      <div className="images">
+
       </div>
     </div>
 
